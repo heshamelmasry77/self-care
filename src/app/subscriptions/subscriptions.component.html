@@ -1,5 +1,6 @@
 <div class="Subscriptions">
     <h1>subscriptions </h1>
+    <div *ngIf="!subscriptions">loading..</div>
     <ul *ngFor="let subscription of subscriptions">
         <li>
             <p><span>ID : </span>{{subscription.id}}</p>
