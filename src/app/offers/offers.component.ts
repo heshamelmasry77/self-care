@@ -19,7 +19,6 @@ export class OffersComponent implements OnInit {
   getOffers() {
     this.apiService.getOffers();
     return this.apiService.getOffers().subscribe((data: { offers: any }) => {
-      console.log(data.offers);
       this.offers = data.offers;
     })
   }
