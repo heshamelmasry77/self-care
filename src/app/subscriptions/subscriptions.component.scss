@@ -1,0 +1,52 @@
+.Subscriptions {
+  display: flex;
+  max-width: 1024px;
+  margin: auto;
+  width: 100%;
+  flex-direction: column;
+  background-color: cornsilk;
+  padding: 25px;
+
+  h1 {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      padding-bottom: 25px;
+
+    }
+
+    span {
+      color: grey;
+    }
+  }
+
+  hr {
+    color: grey;
+  }
+
+  button {
+    border-radius: 2px;
+    border: none;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: #e04d36;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 180px;
+    font-size: 16px;
+  }
+}
