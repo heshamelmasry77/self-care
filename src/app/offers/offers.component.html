@@ -1,5 +1,6 @@
 <div class="Offers">
     <h1>offers</h1>
+    <div *ngIf="!offers">loading..</div>
     <ul *ngFor="let offer of offers">
         <li>
             <p><span>ID : </span>{{offer.id}}</p>
