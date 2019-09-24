@@ -1,1 +1,10 @@
 <p>offers works!</p>
+
+<ul *ngFor="let offer of offers">
+    <li>
+        <p><span>ID: </span>{{offer.id}}</p>
+        <p><span>Name: </span>{{offer.name}}</p>
+        <p><span>Contract End Date: </span>{{offer.contractEndDate}}</p>
+        <p><span>Contract Start Date: </span>{{offer.contractStartDate}}</p>
+    </li>
+</ul>
