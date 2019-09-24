@@ -30,5 +30,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Two routes in the project 
 `/offers`
+It gets all the available offers
+
 `/subscriptions/:offerId`
+
+It gets all the available subscriptions for a specefic offer 
+
 
