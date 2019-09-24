@@ -1,16 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from '../services/api.service';
 
 @Component({
-  selector: 'app-subscriptions',
-  templateUrl: './subscriptions.component.html',
-  styleUrls: ['./subscriptions.component.scss']
+    selector: 'app-subscriptions',
+    templateUrl: './subscriptions.component.html',
+    styleUrls: ['./subscriptions.component.scss']
 })
 export class SubscriptionsComponent implements OnInit {
+    subscriptions;
 
-  constructor() { }
+    constructor(private apiService: ApiService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.getSubscriptions();
+    }
 
+    getSubscriptions() {
+        this.apiService.getSubscriptions();
+        return this.apiService.getSubscriptions().subscribe((data: { subscriptions: any }) => {
+            console.log(data.subscriptions);
+            this.subscriptions = data.subscriptions;
+        })
+    }
 }
