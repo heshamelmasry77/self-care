@@ -6,5 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
+
+  public getOffers() {
+    return this.http.get(`https://selfcare-service.demo.melita.com/interview/api/offers`);
+  }
+
+  public getSubscriptions() {
+    return this.http.get(`https://selfcare-service.demo.melita.com/interview/api/offers/100/subscriptions`);
+  }
 }
