@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## More ABout The Project
 
-Two routes project 
+Two routes in the project 
 `/offers`
 `/subscriptions/:offerId`
 
