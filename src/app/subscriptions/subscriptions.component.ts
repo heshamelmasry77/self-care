@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiService} from '../services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-subscriptions',
@@ -8,17 +9,19 @@ import {ApiService} from '../services/api.service';
 })
 export class SubscriptionsComponent implements OnInit {
     subscriptions;
+  offerId;
 
-    constructor(private apiService: ApiService) {
+    constructor(private apiService: ApiService,private route: ActivatedRoute) {
     }
 
     ngOnInit() {
-        this.getSubscriptions();
+      this.offerId = this.route.snapshot.paramMap.get("id");
+      this.getOfferSubscriptions(this.offerId);
     }
 
-    getSubscriptions() {
-        this.apiService.getSubscriptions();
-        return this.apiService.getSubscriptions().subscribe((data: { subscriptions: any }) => {
+    getOfferSubscriptions(id) {
+        this.apiService.getSubscriptionsById(id);
+        return this.apiService.getSubscriptionsById(id).subscribe((data: { subscriptions: any }) => {
             console.log(data.subscriptions);
             this.subscriptions = data.subscriptions;
         })

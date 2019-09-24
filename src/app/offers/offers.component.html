@@ -6,5 +6,8 @@
         <p><span>Name: </span>{{offer.name}}</p>
         <p><span>Contract End Date: </span>{{offer.contractEndDate}}</p>
         <p><span>Contract Start Date: </span>{{offer.contractStartDate}}</p>
+        <a [routerLink]="['/subscriptions/',offer.id]">
+            view offer
+        </a>
     </li>
 </ul>

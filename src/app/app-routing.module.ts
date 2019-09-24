@@ -5,9 +5,9 @@ import { OffersComponent } from './offers/offers.component';
 
 
 const routes: Routes = [
-  {path:'subscriptions', component: SubscriptionsComponent},
   {path:'offers', component: OffersComponent},
-  { path: '', redirectTo: '/subscriptions', pathMatch: 'full' }
+  { path: '', redirectTo: '/offers', pathMatch: 'full' },
+  { path: 'subscriptions/:id',      component: SubscriptionsComponent },
 ];
 
 @NgModule({

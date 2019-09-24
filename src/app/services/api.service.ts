@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {SubscriptionsComponent} from "../subscriptions/subscriptions.component";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ApiService {
     return this.http.get(`https://selfcare-service.demo.melita.com/interview/api/offers`);
   }
 
-  getSubscriptions() {
-    return this.http.get(`https://selfcare-service.demo.melita.com/interview/api/offers/100/subscriptions`);
+  getSubscriptionsById(id) {
+    return this.http.get(`https://selfcare-service.demo.melita.com/interview/api/offers/${id}/subscriptions`);
   }
 }
