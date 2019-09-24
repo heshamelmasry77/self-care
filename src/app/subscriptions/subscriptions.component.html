@@ -1,9 +1,12 @@
-<p>subscriptions works!</p>
-
-<ul *ngFor="let subscription of subscriptions">
-    <li>
-        <p><span>ID: </span>{{subscription.id}}</p>
-        <p><span>Name: </span>{{subscription.name}}</p>
-        <p><span>Type: </span>{{subscription.type}}</p>
-    </li>
-</ul>
+<div class="Subscriptions">
+    <h1>subscriptions </h1>
+    <ul *ngFor="let subscription of subscriptions">
+        <li>
+            <p><span>ID : </span>{{subscription.id}}</p>
+            <p><span>Name : </span>{{subscription.name}}</p>
+            <p><span>Type : </span>{{subscription.type}}</p>
+        </li>
+        <hr/>
+    </ul>
+    <button type="button" routerLink="/">Go Back</button>
+</div>

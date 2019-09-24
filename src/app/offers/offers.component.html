@@ -1,13 +1,14 @@
-<p>offers works!</p>
-
-<ul *ngFor="let offer of offers">
-    <li>
-        <p><span>ID: </span>{{offer.id}}</p>
-        <p><span>Name: </span>{{offer.name}}</p>
-        <p><span>Contract End Date: </span>{{offer.contractEndDate}}</p>
-        <p><span>Contract Start Date: </span>{{offer.contractStartDate}}</p>
-        <a [routerLink]="['/subscriptions/',offer.id]">
-            view offer
-        </a>
-    </li>
-</ul>
+<div class="Offers">
+    <h1>offers</h1>
+    <ul *ngFor="let offer of offers">
+        <li>
+            <p><span>ID : </span>{{offer.id}}</p>
+            <p><span>Name : </span>{{offer.name}}</p>
+            <p><span>Contract End-Date : </span>{{offer.contractEndDate}}</p>
+            <p><span>Contract Start-Date : </span>{{offer.contractStartDate}}</p>
+            <a [routerLink]="['/subscriptions/',offer.id]">
+                view offer
+            </a>
+        </li>
+    </ul>
+</div>
